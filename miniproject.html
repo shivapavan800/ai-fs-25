@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Header Example</title>
+    <style>
+       .header {
+        width: 100%;
+        height: 75px;
+        top: 0;
+        left: 0;
+        background-color: #3498db;
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+       }
+         .header h1 {
+          color: white;
+          margin: 0;
+         }
+         .sidebar {
+          width: 40px;
+          height: 100vh;
+          background-color: #2c3e50;
+          color: white;
+          padding: 20px;
+          position: fixed;
+          top: 75px; /* Below the header */
+          left: 0;
+        display: flex;
+          text-align: center;
+         }
+         .content {
+          margin-left: 99px; /* Adjust based on sidebar width */
+          padding: 20px;
+          background-color: #ecf0f1;
+          height: calc(100vh - 75px); /* Full height minus header */
+         }
+         .footer {
+          width: 100%;
+          height: 50px;
+          background-color: #34495e;
+          color: rgb(215, 7, 7);
+          text-align: center;
+          line-height: 50px;
+          position: fixed;
+          bottom: 0;
+         }
+    </style>
+    <body>
+        <div>
+            <header class="header">
+                <h1>MRUH</h1>
+            </header>
+        </div>
+        <div class="sidebar">Sidebar </div>
+        <div class="content">
+            <h2>Content Area</h2>
+            <p>This is the main content area where you can add your text, images, or any other content.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, eu consectetur nisl nisi euismod nisi.</p>
+            <p>Aliquam erat volutpat. Etiam vitae turpis at quam laoreet cursus. Suspendisse potenti. Nullam ac urna eu felis dapibus condimentum.</p>
+            <p>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.</p>
+        </div>
+        <div class="footer">Footer</div>
+    </div>
+   
+    </body>
+</html>
