@@ -1,71 +1,349 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Header Example</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Header with Logo and Icons</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
     <style>
-       .header {
-        width: 100%;
-        height: 75px;
+      header {
+        background-color: #f47c20;
+        padding: 15px 20px;
+        color: white;
+        height: 70px;
+        position: sticky;
         top: 0;
-        left: 0;
-        background-color: #3498db;
-        font-size: 1.5rem;
+        z-index: 1000;
+      }
+      .header-title {
+        flex: 1;
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+        font-family: "Segoe UI", sans-serif;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+      }
+      .header-container {
         display: flex;
-        justify-content: center;
         align-items: center;
-        position: fixed;
-       }
-         .header h1 {
-          color: white;
-          margin: 0;
-         }
-         .sidebar {
-          width: 40px;
-          height: 100vh;
-          background-color: #2c3e50;
-          color: white;
-          padding: 20px;
-          position: fixed;
-          top: 75px; /* Below the header */
-          left: 0;
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
+      .container {
         display: flex;
-          text-align: center;
-         }
-         .content {
-          margin-left: 99px; /* Adjust based on sidebar width */
-          padding: 20px;
-          background-color: #ecf0f1;
-          height: calc(100vh - 75px); /* Full height minus header */
-         }
-         .footer {
-          width: 100%;
-          height: 50px;
-          background-color: #34495e;
-          color: rgb(215, 7, 7);
-          text-align: center;
-          line-height: 50px;
-          position: fixed;
-          bottom: 0;
-         }
+        min-height: 80vh;
+        background-color: rgb(239, 239, 12);
+      }
+      aside {
+        background-color: #f1f1f1;
+        width: 25%;
+        padding: 20px;
+        background-color: #bfada2b5;
+
+        border-radius: 5px;
+      }
+      main {
+        background-color: #ecf0f1;
+        flex: 1;
+        padding: 20px;
+
+        border-radius: 5px;
+      }
+      footer {
+        background-color: #766159a5;
+        color: white;
+        text-align: center;
+        padding: 15px;
+
+        border-radius: 5px;
+      }
+
+      .logo img {
+        height: 80px;
+      }
+
+      .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      nav {
+        display: flex;
+        gap: 20px;
+      }
+
+      .nav-links a {
+        color: white;
+        text-decoration: none;
+        margin-left: 15px;
+        font-size: 16px;
+        font-weight: bold;
+        transition: color 0.3s ease;
+      }
+      .nav-links a:hover {
+        color: #ffedcc;
+        text-decoration: underline;
+      }
+
+      nav a i {
+        margin-right: 5px;
+      }
+      .maincontainer {
+        height: 500px;
+        width: 1000px;
+        background-color: rgba(106, 100, 100, 0.523);
+        display: flex;
+        flex-wrap: wrap;
+        padding: 20px;
+        border-radius: 10px;
+        justify-content: center;
+        opacity: 3;
+      }
+      .box1 {
+        background-color: rgb(11, 11, 11);
+        border: 2px solid black;
+        border-radius: 5px;
+        color: black;
+        height: 200px;
+        width: 400px;
+        margin-right: 30px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        mask-image: url(mainlogo.jpg);
+      }
+      .box2 {
+        background-color: rgb(65, 209, 46);
+        border: 2px solid black;
+        border-radius: 5px;
+        color: black;
+        height: 200px;
+        width: 400px;
+        flex-direction: row;
+        margin-right: 30px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        mask-image: url(box2.jpg);
+      }
+      .box3 {
+        background-color: rgb(65, 209, 46);
+        border: 2px solid black;
+        border-radius: 5px;
+        color: black;
+        height: 200px;
+        width: 400px;
+        flex-direction: row;
+        margin-right: 30px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .box4 {
+        background-color: rgb(65, 209, 46);
+        border: 2px solid black;
+        border-radius: 5px;
+        color: black;
+        height: 200px;
+        width: 400px;
+        flex-direction: row;
+        margin-right: 30px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      .fanta-sidebar {
+        background: linear-gradient(to right, #ffa726, #fb8c00);
+        color: white;
+        padding: 20px;
+        border-radius: 15px;
+        font-family: "Segoe UI", sans-serif;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        max-width: 300px;
+      }
+
+      .fanta-sidebar h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .fanta-sidebar p {
+        font-size: 16px;
+        margin-bottom: 15px;
+      }
+
+      .fanta-sidebar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 15px 0;
+      }
+
+      .fanta-sidebar li {
+        background-color: rgba(255, 255, 255, 0.2);
+        padding: 8px;
+        margin: 5px 0;
+        border-radius: 8px;
+      }
+
+      .buy-now {
+        background-color: white;
+        color: #fb8c00;
+        border: none;
+        padding: 10px 15px;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s ease;
+      }
+
+      .buy-now:hover {
+        background-color: #ffe0b2;
+      }
+      main {
+        background-image: url("background.jpg"); /* replace with your image path */
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 20px;
+        color: white;
+      }
+      footer {
+        background-color: #f47c20; /* Fanta orange */
+        color: white;
+        padding: 20px 0;
+        font-family: Arial, sans-serif;
+      }
+      .footer-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        padding: 0 20px;
+      }
+      .footer-container div {
+        max-width: 300px;
+        margin-bottom: 20px;
+      }
+
+      .footer-about h3,
+      .footer-contact h4,
+      .footer-social h4 {
+        margin-bottom: 10px;
+      }
+
+      .footer-social a {
+        color: white;
+        text-decoration: none;
+        margin: 0 5px;
+      }
+
+      .footer-social a:hover {
+        text-decoration: underline;
+      }
+
+      .footer-bottom {
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        padding-top: 10px;
+        font-size: 14px;
+      }
     </style>
-    <body>
-        <div>
-            <header class="header">
-                <h1>MRUH</h1>
-            </header>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <img src="fanta-drink-vector-logo.png" alt="Fanta Logo" />
         </div>
-        <div class="sidebar">Sidebar </div>
-        <div class="content">
-            <h2>Content Area</h2>
-            <p>This is the main content area where you can add your text, images, or any other content.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi eu consectetur consectetur, nisl nisi consectetur nisi, eu consectetur nisl nisi euismod nisi.</p>
-            <p>Aliquam erat volutpat. Etiam vitae turpis at quam laoreet cursus. Suspendisse potenti. Nullam ac urna eu felis dapibus condimentum.</p>
-            <p>Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.</p>
+        <h1 class="header-title">Taste the Fun with Fanta!</h1>
+        <nav class="nav-links">
+          <a href="#"><i class="fa-solid fa-house"></i>Home</a>
+          <a href="#"><i class="fa-solid fa-cart-shopping"></i>Products</a>
+          <a href="#"><i class="fa-solid fa-circle-info"></i>About</a>
+          <a href="#"><i class="fa-solid fa-phone"></i>Contact</a>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <aside>
+        <h2>🍊 Taste the Fun!</h2>
+        <p>
+          Refresh your day with the zesty burst of Fanta! Made with real fruit
+          flavors, it's the perfect drink to energize your mood and beat the
+          heat.
+        </p>
+        <ul>
+          <li>✅ Real Fruit Flavors</li>
+          <li>✅ Available in Orange, Grape, Mango & more!</li>
+          <li>✅ Perfect for Parties & Summer Days</li>
+        </ul>
+        <button class="buy-now">Grab Your Fanta!</button>
+      </aside>
+
+      <main>
+        <div class="maincontainer">
+          <div class="box1">
+            <img
+              src="box1.jpg"
+              alt="Logo"
+              style="width: 100%; height: 100%; object-fit: cover"
+            />
+          </div>
+          <div class="box2">
+            <img
+              src="box2.jpg"
+              alt="Logo"
+              style="width: 100%; height: 100%; object-fit: cover"
+            />
+          </div>
+          <div class="box3">
+            <img
+              src="box3.jpg"
+              alt="Logo"
+              style="width: 100%; height: 100%; object-fit: cover"
+            />
+          </div>
+          <div class="box4">
+            <img
+              src="box4.jpg"
+              alt="Logo"
+              style="width: 100%; height: 100%; object-fit: cover"
+            />
+          </div>
         </div>
-        <div class="footer">Footer</div>
+      </main>
     </div>
-   
-    </body>
+    <footer>
+      <div class="footer-container">
+        <div class="footer-about">
+          <h3>Fanta Soft Drinks</h3>
+          <p>
+            Refreshing the world with bold fruity flavors! Enjoy our delicious
+            range of soft drinks made to energize your moments.
+          </p>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <p>Email: support@fanta.com</p>
+          <p>Phone: +91 98765 43210</p>
+          <p>Location: Mumbai, India</p>
+        </div>
+        <div class="footer-social">
+          <h4>Follow Us</h4>
+          <a href="#">Facebook</a> | <a href="#">Instagram</a> |
+          <a href="#">Twitter</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Fanta Soft Drinks. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
 </html>
